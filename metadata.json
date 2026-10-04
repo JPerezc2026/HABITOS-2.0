@@ -1,0 +1,6 @@
+{
+  "name": "Núcleo OS // Cockpit Táctico v4.10",
+  "description": "Cockpit táctico de alto rendimiento para control de liquidez financiera, telemetría bio-médica, matriz ENARM y segundo cerebro clínico con IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

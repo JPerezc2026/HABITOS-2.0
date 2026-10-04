@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-core: #020711;
+    --surface-lowest: #020711;
+    --surface: #05101d;
+    --surface-container: #081628;
+    --surface-container-high: #0e2238;
+    --surface-border: #163a5d;
+    --surface-border-focus: #36d7d0;
+
+    --text-primary: #f8fafc;
+    --text-muted: #8ba3c7;
+    --text-faint: #526f8c;
+
+    --color-telemetry: #36d7d0;
+    --color-finance: #65d9a5;
+    --color-enarm: #f1b84b;
+    --color-ai: #60a5fa;
+    --color-danger: #ef7085;
+
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    background-color: var(--bg-core);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* Custom scrollbar for HUD panels */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040c17;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #193859;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #36d7d0;
+  }
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-panel {
+  background: #05101d;
+  border: 1px solid #163a5d;
+  border-radius: 6px;
+}
+
+.hud-panel-active {
+  background: #081628;
+  border: 1px solid #1e4973;
+}
+
+.hud-panel-glow {
+  box-shadow: 0 0 16px -4px rgba(54, 215, 208, 0.18);
+}
+
+.hud-border-cyan {
+  border-color: #36d7d0;
+}
+
+.hud-grid-pattern {
+  background-image: radial-gradient(rgba(22, 58, 93, 0.4) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.96);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
